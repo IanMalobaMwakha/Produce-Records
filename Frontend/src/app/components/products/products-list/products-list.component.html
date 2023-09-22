@@ -1,1 +1,29 @@
-<p>products-list works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Products</h1>
+
+    <table class="table" *ngIf="products && products.length > 0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Farmer Name</th>
+                <th>Contact</th>
+                <th>Product Quantity</th>
+                <th>Product Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.farmer_name }}</td>
+                <td>{{ product.email }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.value }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!products || products.length <= 0"><b>No Products Found!</b></p>
+</div>
