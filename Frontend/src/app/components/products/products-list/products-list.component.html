@@ -11,6 +11,7 @@
                 <th>Contact</th>
                 <th>Product Quantity</th>
                 <th>Product Value</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{ product.email }}</td>
                 <td>{{ product.quantity }}</td>
                 <td>{{ product.value }}</td>
+                <td><a [routerLink]="['/products', 'edit', product.id]">View</a></td>
             </tr>
         </tbody>
     </table>
