@@ -37,5 +37,18 @@ namespace Backend.Controllers
             return Ok(productRequest);
         }
 
+        [HttpGet]
+        [Route("{id:Guid")]
+        public async Task<IActionResult> GetProduct([FromRoute] Guid id)
+        {
+            var product = 
+            await _backendDBContext.Products.FirstOrDefaultAsync(x => x.Id ==  id);
+
+            if (product == null)
+            {
+                return NotFound();  
+            }
+            return Ok(product);
+        }
     }
 }

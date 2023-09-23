@@ -7,43 +7,43 @@
                 <div class="mb-3">
                     <label for="id" class="form-label">Product Id</label>    
                     <input type="text" class="form-control" id="id" readonly 
-                    name="id" [(ngModel)] = "addProductRequest.name">
+                    name="id" [(ngModel)] = "productDetails.name">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Product Name</label>    
                     <input type="text" class="form-control" id="name" placeholder="e.g wheat, milk, cotton .." 
-                    name="name" [(ngModel)] = "addProductRequest.name">
+                    name="name" [(ngModel)] = "productDetails.name">
                 </div>
         
                 <div class="mb-3">
                     <label for="" class="form-label">Product Category</label>
                     <input type="text" class="form-control" id="category" placeholder="Plant Derived or Animal Derived"
-                    name="category" [(ngModel)] = "addProductRequest.category">
+                    name="category" [(ngModel)] = "productDetails.category">
                 </div>
         
                 <div class="mb-3">
                     <label for="" class="form-label">Farmer Name</label>
                     <input type="name" class="form-control" id="name"
-                    name="farmerName" [(ngModel)] = "addProductRequest.farmerName">
+                    name="farmerName" [(ngModel)] = "productDetails.farmerName">
                 </div>
         
                 <div class="mb-3">
                     <label for="" class="form-label">Farmer Email</label>
                     <input type="email" class="form-control" id="email" placeholder="e.g johndoe@gmail.com"
-                    name="email" [(ngModel)] = "addProductRequest.email">
+                    name="email" [(ngModel)] = "productDetails.email">
                 </div>
         
                 <div class="mb-3">
                     <label for="" class="form-label">Product Quantity</label>
                     <input type="text" class="form-control" id="quantity"
-                    name="quantity" [(ngModel)] = "addProductRequest.quantity">
+                    name="quantity" [(ngModel)] = "productDetails.quantity">
                 </div>
         
                 <div class="mb-3">
                     <label for="" class="form-label">Product Value (In € euros)</label>
                     <input type="number" class="form-control" id="value" placeholder="enter estimated value of produce in euros (€)"
-                    name="value" [(ngModel)] = "addProductRequest.value">
+                    name="value" [(ngModel)] = "productDetails.value">
                 </div>
                 
                 <button type="submit" class="btn btn-primary mb-3">Save Changes</button>
