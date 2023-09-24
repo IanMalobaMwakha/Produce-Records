@@ -2,8 +2,8 @@
     <h1 class="mb-3">Edit Product</h1>
 
     <div class="row">
-        <div class="col-6" (ngSubmit)="updateProduct()">
-            <form action="" #form="ngForm">
+        <div class="col-6">
+            <form  (ngSubmit)="updateProduct()" #form="ngForm">
                 <div class="mb-3">
                     <label for="id" class="form-label">Product Id</label>    
                     <input type="text" class="form-control" id="id" readonly 
