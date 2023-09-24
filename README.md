@@ -1,5 +1,5 @@
 # AGRI-DATA
-
+This is a basic CRUD web application with both Frontend and Backend, developed as a task for Hahn Softwareentwicklung. It allows Creating, Reading, Updating and Deleting  of Agricultural Produce add also computes Sum Value of Total Produce. 
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
