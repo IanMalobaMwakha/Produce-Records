@@ -4,39 +4,58 @@
     <table class="table" *ngIf="products && products.length > 0">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Product Name</th>
-                <th>Category</th>
-                <th>Farmer Name</th>
-                <th>Contact</th>
-                <th>Product Quantity</th>
-                <th>Product Value</th>
+                <th>Product <br>ID</th>
+                <th>Product <br>Name</th>
+                <th>Product <br>Category</th>
+                <th>Farmer <br>Name</th>
+                <th>Farmer <br>Contact</th>
+                <th>Product <br>Quantity</th>
+                <th>Product <br>Value (€)</th>
                 <th></th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let product of products">
-                <td><small>{{ product.id }}</small></td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.category }}</td>
-                <td>{{ product.farmerName }}</td>
-                <td><a href = "mailto:{{ product.email }}" target="_blank">{{ product.email }}</a></td>
-                <td>{{ product.quantity }}</td>
-                <td>{{ product.value }}</td>
+                <td><small>{{ product.id || '_' }}</small></td>
+                <td>{{ product.name || '_' }}</td>
+                <td>{{ product.category || '_' }}</td>
+                <td>{{ product.farmerName || '_' }}</td>
+                <td>
+                    <a *ngIf="product.email" href="mailto:{{ product.email }}" target="_blank">{{ product.email }}</a>
+                    <span *ngIf="!product.email">_</span>
+                </td>
+                <td>{{ product.quantity || '_' }}</td>
+                <td>{{ product.value || '_' }}</td>
                 <td>
                     <button type="submit" class="btn btn-primary mb-3">
-                      <a [routerLink]="['/products', 'edit', product.id]" style="color: white; text-decoration: none;">Edit</a>
+                        <a [routerLink]="['/products', 'edit', product.id]" style="color: white; text-decoration: none;">Edit</a>
                     </button>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger mb-3" 
-                        (click)="deleteProduct(product.id)">Delete</button>
+                    <button type="button" class="btn btn-danger mb-3" (click)="deleteProduct(product.id)">Delete</button>
                 </td>
-
-
             </tr>
         </tbody>
+        
     </table>
     <p *ngIf="!products || products.length <= 0"><b>No Products Found!</b></p>
+
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <h4>Total Value of All Produce</h4>
+            <table class="table">
+                
+                <tbody>
+                    <tr>
+                        <td>The total value of all Agricultural Produce In Euros (€)</td>
+                        <td><b>{{ totalValue | currency: 'EUR' }}</b></td> <!-- Format as currency -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
