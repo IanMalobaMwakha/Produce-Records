@@ -1,7 +1,7 @@
 <div class="container my-5">
-    <h1 class="mb-3">Products</h1>
-
-    <table class="table" *ngIf="products && products.length > 0">
+    <h2 class="mb-3"><U>RECORD OF AGRICULTURAL PRODUCE</U></h2>
+    <br>
+    <table class="table table-primary table-striped table-bordered border-danger" *ngIf="products && products.length > 0">
         <thead>
             <tr>
                 <th>Product <br>ID</th>
@@ -26,7 +26,7 @@
                     <span *ngIf="!product.email">_</span>
                 </td>
                 <td>{{ product.quantity || '_' }}</td>
-                <td>{{ product.value || '_' }}</td>
+                <td>€{{ product.value || '_' }}</td>
                 <td>
                     <button type="submit" class="btn btn-primary mb-3">
                         <a [routerLink]="['/products', 'edit', product.id]" style="color: white; text-decoration: none;">Edit</a>
@@ -40,17 +40,13 @@
         
     </table>
     <p *ngIf="!products || products.length <= 0"><b>No Products Found!</b></p>
-
-    <br>
-    <br>
     <div class="row">
         <div class="col-12">
-            <h4>Total Value of All Produce</h4>
-            <table class="table">
+            <table class="table table-primary table-striped table-bordered border-danger">
                 
                 <tbody>
                     <tr>
-                        <td>The total value of all Agricultural Produce In Euros (€)</td>
+                        <td><b>The total value of all Agricultural Produce In Euros (€)</b></td>
                         <td><b>{{ totalValue | currency: 'EUR' }}</b></td> <!-- Format as currency -->
                     </tr>
                 </tbody>
