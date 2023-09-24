@@ -38,11 +38,10 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("{id:Guid")]
+        [Route("{id:Guid}")]
         public async Task<IActionResult> GetProduct([FromRoute] Guid id)
         {
-            var product = 
-            await _backendDBContext.Products.FirstOrDefaultAsync(x => x.Id ==  id);
+            var product = await _backendDBContext.Products.FirstOrDefaultAsync(x => x.Id ==  id);
 
             if (product == null)
             {
@@ -50,5 +49,29 @@ namespace Backend.Controllers
             }
             return Ok(product);
         }
+
+        [HttpPut]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> UpdateProduct([FromRoute] Guid id, Product updateProductRequest )
+        {
+            var product = await _backendDBContext.Products.FindAsync(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            product.Name = updateProductRequest.Name;
+            product.Category = updateProductRequest.Category;
+            product.FarmerName = updateProductRequest.FarmerName;
+            product.Email = updateProductRequest.Email;
+            product.Quantity = updateProductRequest.Quantity;
+            product.Value = updateProductRequest.Value;
+
+            await _backendDBContext.SaveChangesAsync();
+
+            return Ok(product);
+        }
+
     }
 }

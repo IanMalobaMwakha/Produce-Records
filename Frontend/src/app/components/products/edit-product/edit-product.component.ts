@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscriber } from 'rxjs';
 import { Product } from 'src/app/models/product.model';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -20,7 +21,8 @@ export class EditProductComponent implements OnInit {
     value: 0,
   };
 
-  constructor(private route: ActivatedRoute, private productService: ProductsService) { }
+  constructor(private route: ActivatedRoute, private productService: 
+    ProductsService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe ({
@@ -35,6 +37,15 @@ export class EditProductComponent implements OnInit {
             }
           })
         }
+      }
+    })
+  }
+
+  updateProduct() {
+    this.productService.updateProduct(this.productDetails.id, this.productDetails)
+    .subscribe({
+      next: (response) => {
+        this.router.navigate(['products']);
       }
     })
   }
