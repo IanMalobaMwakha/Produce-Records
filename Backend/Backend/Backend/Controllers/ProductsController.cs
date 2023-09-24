@@ -76,11 +76,11 @@ namespace Backend.Controllers
 
         [HttpDelete]
         [Route("{id:Guid}")]
-        public async Task<ActionResult> DeleteProduct([FromRoute] Guid id)
+        public async Task<IActionResult> DeleteProduct([FromRoute] Guid id)
         {
             var product = await _backendDBContext.Products.FindAsync(id);
 
-            if (product == null);
+            if (product == null)
             {
                 return NotFound();
             }

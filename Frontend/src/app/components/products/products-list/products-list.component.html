@@ -12,6 +12,7 @@
                 <th>Product Quantity</th>
                 <th>Product Value</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,10 +21,20 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.category }}</td>
                 <td>{{ product.farmerName }}</td>
-                <td>{{ product.email }}</td>
+                <td><a href = "mailto:{{ product.email }}" target="_blank">{{ product.email }}</a></td>
                 <td>{{ product.quantity }}</td>
                 <td>{{ product.value }}</td>
-                <td><a [routerLink]="['/products', 'edit', product.id]">View</a></td>
+                <td>
+                    <button type="submit" class="btn btn-primary mb-3">
+                      <a [routerLink]="['/products', 'edit', product.id]" style="color: white; text-decoration: none;">Edit</a>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger mb-3" 
+                        (click)="deleteProduct(product.id)">Delete</button>
+                </td>
+
+
             </tr>
         </tbody>
     </table>
