@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Backend.Models;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Backend.Controllers
 {
@@ -70,8 +71,24 @@ namespace Backend.Controllers
 
             await _backendDBContext.SaveChangesAsync();
 
-            return Ok(product);
+            return Ok(product);         
         }
 
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public async Task<ActionResult> DeleteProduct([FromRoute] Guid id)
+        {
+            var product = await _backendDBContext.Products.FindAsync(id);
+
+            if (product == null);
+            {
+                return NotFound();
+            }
+           
+            _backendDBContext.Products.Remove(product);
+            await _backendDBContext.SaveChangesAsync();
+
+            return Ok(product);
+        }
     }
 }
