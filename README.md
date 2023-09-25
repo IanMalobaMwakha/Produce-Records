@@ -1,5 +1,5 @@
 # AGRI-DATA
-This is a basic CRUD web application with both Frontend and Backend, developed as a task for Hahn Softwareentwicklung. It allows Creating, Reading, Updating and Deleting  of Agricultural Produce add also computes Sum Value of Total Produce. 
+This is a basic CRUD web application with both Frontend and Backend, developed as a task for Hahn Softwareentwicklung. It allows Creating, Reading, Updating and Deleting  of Agricultural Produce and also computes Sum Value of Total Produce. 
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
@@ -31,3 +31,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+  Code Editor Used: **VS Code**
+
+
+# Backend
+A few relevant details:
+- I used **SQL Server** as the database for this project.
+- Implemented the ProductService, which controls the validation of the Entities.
+- Packages used: Microsoft.EntityFrameWorkCore.SqlServer, MicrosoftEntityFrameworkCore.Tools
+- Utilizing DBContext and dependency injection for enabling communication with database
+
+  Code Editor Used: **Visual Studio**
+
+
+  ## Startup
+
+**__Use ```docker compose up --build```.__**
+**__Navigate to [[http://localhost:4200/](http://localhost:4200)](http://localhost:4200/) (```http://localhost:4200```) to access the Angular Front-End application.__**
