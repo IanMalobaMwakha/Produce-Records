@@ -44,7 +44,7 @@ A few relevant details:
   Code Editor Used: **Visual Studio**
 
 
-  ## Startup
+# Startup
 
 **__Use ```docker compose up --build```.__**
 **__Navigate to [(http://localhost:4200)](http://localhost:4200/) "```http://localhost:4200```" to access the Angular Front-End application.__**
