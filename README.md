@@ -47,4 +47,4 @@ A few relevant details:
   ## Startup
 
 **__Use ```docker compose up --build```.__**
-**__Navigate to [[http://localhost:4200/](http://localhost:4200)](http://localhost:4200/) (```http://localhost:4200```) to access the Angular Front-End application.__**
+**__Navigate to [(http://localhost:4200)](http://localhost:4200/) (```http://localhost:4200```) to access the Angular Front-End application.__**
