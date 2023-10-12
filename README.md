@@ -56,12 +56,18 @@ A few relevant details:
 - Install Packages: **Microsoft.EntityFrameWorkCore.SqlServer** and **MicrosoftEntityFrameworkCore.Tools**
 
 - Ensure you have installed **SQL Server** in your machine
-Open your SQL Server, Copy the Server Name for example my SQL Server name is `server=DESKTOP-3H783EB\\SQLEXPRESS` and the click on connect to open
-Edit the Connection String: `ProduceRecordsConnectionString` in [appsettings.json](https://github.com/IanMalobaMwakha/Produce-Records/blob/main/Backend/Backend/Backend/appsettings.json) in line 10, replace with your respective server name
-A table for our database will be created in SQL Server called **ProduceRecordsDb**
-In Vsiual Stidio, Open Package Manager Console, and Run: `Add-Migration "Initial Migration"` and then Run: `Update-Database`
+  
+- Open your SQL Server, Copy the Server Name for example my SQL Server name is `server=DESKTOP-3H783EB\\SQLEXPRESS` and the click on connect to open
+  
+- Edit the Connection String: `ProduceRecordsConnectionString` in [appsettings.json](https://github.com/IanMalobaMwakha/Produce-Records/blob/main/Backend/Backend/Backend/appsettings.json) in line 10, replace with your respective server name
+  
+- A table for our database will be created in SQL Server called **ProduceRecordsDb**
 
-- To Access the Backend Application, Run the Application by simply clicking the "Run" button on the toolbar. This will build the project, start the application, and you can observe the output in a pop-up window in your browser(The application will automatically reload upon changing any of the source files) at [https://localhost:7284/swagger/index.html](https://localhost:7284/swagger/index.html). To stop the application, press Shift + F5 or use the "Stop Debugging" button.
+- In Vsiual Stidio, Open Package Manager Console, and Run: `Add-Migration "Initial Migration"` and then Run: `Update-Database`
+
+- To Access the Backend Application, Run the Application by simply clicking the "Run" button on the toolbar. This will build the project, start the application, and you can observe the output in a pop-up window in your browser(The application will automatically reload upon changing any of the source files) at [https://localhost:7284/swagger/index.html](https://localhost:7284/swagger/index.html).
+  
+- To stop the application, press Shift + F5 or use the "Stop Debugging" button.
 
 
 - Run `ng serve` and navigate to [http://localhost:4200](http://localhost:4200/)to access the Angular Front-End application.
