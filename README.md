@@ -63,13 +63,13 @@ A few relevant details:
   
 - A table for our database will be created in SQL Server called **ProduceRecordsDb**
 
-- In Vsiual Stidio, Open Package Manager Console, and Run: `Add-Migration "Initial Migration"` and then Run: `Update-Database`
+- In Visual Studio, Open Package Manager Console, and Run: `Add-Migration "Initial Migration"` and then Run: `Update-Database`
 
 - To Access the Backend Application, Run the Application by simply clicking the "Run" button on the toolbar. This will build the project, start the application, and you can observe the output in a pop-up window in your browser(The application will automatically reload upon changing any of the source files) at [https://localhost:7284/swagger/index.html](https://localhost:7284/swagger/index.html).
   
 - To stop the application, press Shift + F5 or use the "Stop Debugging" button.
 
 
-- Run `ng serve` and navigate to [http://localhost:4200](http://localhost:4200/)to access the Angular Front-End application.
+- Run `ng serve` and navigate to [http://localhost:4200](http://localhost:4200/) to access the Angular Front-End application.
 
 - Now you can perform the CRUD operations in your local machine!
