@@ -73,3 +73,5 @@ A few relevant details:
 - Run `ng serve` and navigate to [http://localhost:4200](http://localhost:4200/) to access the Angular Front-End application.
 
 - Now you can perform the CRUD operations in your local machine!
+
+Verification Vedio Link: [https://drive.google.com/file/d/1wACGNKa2UMHrnzsePDP91OD5n7cwldtQ/view](https://drive.google.com/file/d/1wACGNKa2UMHrnzsePDP91OD5n7cwldtQ/view)
